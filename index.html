@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>I still be here!</title>
+  <title>TÔI ĐÃ QUÁ NGÂY THƠ!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<p id="howLong" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight:bold; text-align: center; font-size: 15px; margin-top: 0px; color: white; font-family: Tahoma; background: lightblue; padding: 20px; border-radius: 10px;"></p>
+<p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight:bold; text-align: center; font-size: 15px; margin-top: 0px; color: white; font-family: Tahoma; background: lightblue; padding: 20px; border-radius: 10px;">Leave me alone!<br/><span id="howLong"></span></p>
 
 <script>
-var thisDay = new Date("Jun 8, 2019 12:00:00").getTime();
+var thisDay = new Date("Oct 9, 2029 00:00:00").getTime();
 
 var x = setInterval(function() {
 
   var now = new Date().getTime();
     
-  var distance = now - thisDay;
+  var distance = thisDay - now;
     
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));    
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   
   document.getElementById("howLong").innerHTML = days + " NGÀY " + hours + " GIỜ ";
 }, 1000);
